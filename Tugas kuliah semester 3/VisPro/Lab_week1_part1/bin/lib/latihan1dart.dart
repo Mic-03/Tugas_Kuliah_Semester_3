@@ -83,7 +83,7 @@ void main() {
   });
 }
 
-// Fungsi Bubble Sort menggunakan while
+// Fungsi Bubble Sort
 List<int> bubbleSort(List<int> list) {
   List<int> arr = List.from(list);
   int n = arr.length;
@@ -172,7 +172,6 @@ void piramidaDalamArray(List<int> list) {
   });
 }
 
-// Fungsi seperti if
 void tes1(bool condition, Function onTrue, Function onFalse) {
   if (condition) {
     onTrue();
@@ -181,7 +180,6 @@ void tes1(bool condition, Function onTrue, Function onFalse) {
   }
 }
 
-// Fungsi seperti while
 void tes2(bool Function() condition, Function body) {
   while (condition()) {
     body();
