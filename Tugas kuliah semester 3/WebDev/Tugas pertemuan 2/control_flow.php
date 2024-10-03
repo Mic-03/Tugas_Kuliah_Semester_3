@@ -1,12 +1,25 @@
 <?php
-$birthdate = "2005-01-01";
-$currentYear = date("Y");
-$birthYear = date("Y", strtotime($birthdate));
-$age = $currentYear - $birthYear;
+include "variables.php";
 
-if ($age >= 18) {
-    echo "You are an adult.";
+$selectedStudent = null;
+foreach ($students as $student) {
+    if ($student['name'] === 'Miicn') {
+        $selectedStudent = $student;
+        break;
+    }
+}
+
+if ($selectedStudent !== null) {
+    $age = calculateAge($selectedStudent['birthdate']);
+
+    if ($age >= 18) {
+        echo "You are an adult. <br>";
+        echo "Age: $age";
+    } else {
+        echo "You are a minor. <br>";
+        echo "Age: $age";
+    }
 } else {
-    echo "You are a minor";
+    echo "Student not found.";
 }
 ?>
